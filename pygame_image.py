@@ -17,7 +17,6 @@ def main():
     kk_img = pg.transform.rotozoom(bg_img_2,10,1.0)
     lis = [bg_img_2,kk_img_2,kk_img_3,kk_img_4,kk_img_5,kk_img,kk_img_5,kk_img_4,kk_img_3,kk_img_2]
 
-    
     tmr = 0
     tmr2 = 0
     while True:
