@@ -11,13 +11,15 @@ def main():
     bg_img_2 = pg.transform.flip(bg_img_2,True,False)
     kk_img = pg.transform.rotate(bg_img_2,10)
     lis = [bg_img_2,kk_img]
-
+    clock = pg.time.Clock()
+    clock.tick(10)
     tmr = 0
+
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
 
-        screen.blit(bg_img, [0, 0])
+        screen.blit(bg_img, [0-tmr, 0])
         screen.blit(lis[tmr%2], [300, 200])
         pg.display.update()
         tmr += 1        
