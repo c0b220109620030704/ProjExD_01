@@ -8,13 +8,16 @@ def main():
     clock  = pg.time.Clock()
     bg_img = pg.image.load("ex01/fig/pg_bg.jpg")
     bg_img_2 = pg.image.load("ex01/fig/3.png")
+    bg_img_2 = pg.transform.flip(bg_img_2,True,False)
+    kk_img = pg.transform.rotate(bg_img_2,10)
+    lis = [bg_img_2,kk_img]
+    print(lis)
     tmr = 0
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
 
         screen.blit(bg_img, [0, 0])
-        screen.blit(bg_img_2, [300, 200])
         pg.display.update()
         tmr += 1        
         clock.tick(10)
